@@ -35,7 +35,7 @@ footer {
 }
 
 .carousel-inner {
-    max-height: 500px; /* Set the maximum height of the carousel */
+    max-height: 800px; /* Set the maximum height of the carousel */
 }
 
 .carousel-item img {
