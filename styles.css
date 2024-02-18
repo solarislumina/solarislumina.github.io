@@ -90,3 +90,10 @@ footer {
 .text-justify {
   text-align: justify;
 }
+
+div.bag-image {
+  display: inline-block;
+
+  /* just so that we  can see in the example */
+  margin-top: 3em;
+}
