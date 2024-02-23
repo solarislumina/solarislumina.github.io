@@ -44,8 +44,11 @@ footer {
 }
 
 #products {
-    background-color: #f5f5f5;
     padding: 50px 0;
+}
+
+#contact {
+    padding: 15px 0;
 }
 
 .product {
@@ -96,4 +99,46 @@ div.bag-image {
 
   /* just so that we  can see in the example */
   margin-top: 3em;
+}
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom: 30%;
+    position:relative;
+    height:0;
+}
+
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+.wrap-input100 {
+    width: 100%;
+    position: relative;
+    border: 1px solid #e6e6e6;
+    border-radius: 13px;
+    padding: 10px 30px 9px 22px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.label-input100 {
+    font-size: 1.5rem;
+    color: #000;
+    line-height: 1.5;
+}
+
+.input100 {
+    display: block;
+    width: 100%;
+    font-size: 1.5rem;
+    background: 0 0;
+    font-size: 18px;
+    color: #000;
+    line-height: 1.2;
+    padding-right: 15px;
 }
