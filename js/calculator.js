@@ -90,7 +90,7 @@ function getTariffUnits(units, min, max) {
     }
 }
 
-function onLoadPage(units, min, max) {
+function onLoadPage() {
     const searchParams = new URLSearchParams(window.location.search);
     if (searchParams.has('days')){
         document.getElementById("days").value = Number(searchParams.get('days'));

@@ -52,7 +52,7 @@
 
 <section id="billCalculator">
     <div class="container clearfix">
-        <h2 class="my-4">Prediction Calculator (12 Panels)</h2>
+        <h2 class="my-4">Prediction Calculator (12 Panels Power Plant)</h2>
         <form>
             <div class="input-group input-group-lg my-3 input-calculator">
                 <label class="input-group-text label-calculator" for="tariffCategory">Tariff Category</label>
@@ -67,6 +67,12 @@
             <div class="input-group input-group-lg my-3 input-calculator">
                 <label class="input-group-text label-calculator" for="units">Number of Units</label>
                 <input type="number" class="form-control" id="units" value="0" min="0" onchange="calculate()">
+                <label class="input-group-text" >kWh</label>
+            </div>
+            <div class="input-group input-group-lg my-3 input-calculator">
+                <label class="input-group-text label-calculator" for="exportUnits">Export Units</label>
+                <input type="number" class="form-control" id="exportUnits" value="800" min="0" onchange="calculate()">
+                <label class="input-group-text" >kWh</label>
             </div>
             <div class="hr-calculator"></div>
             <div class="input-group input-group-lg my-3 input-calculator">
@@ -86,31 +92,64 @@
             </div>
             <div class="hr-calculator"></div>
             <div class="input-group input-group-lg my-3 input-calculator">
-                <label class="input-group-text label-calculator" for="bill">Total Bill</label>
+                <label class="input-group-text label-calculator" for="bill">Bill</label>
                 <input type="text" readonly class="form-control text-end" id="bill" value="0.00" min="0">
-                <label class="input-group-text" for="units">LKR</label>
+                <label class="input-group-text" >LKR</label>
+            </div>
+            <div class="input-group input-group-lg my-3 input-calculator">
+                <label class="input-group-text label-calculator" for="monthlyIncome">Monthly Income</label>
+                <input type="text" readonly class="form-control text-end" id="monthlyIncome" value="0.00" min="0">
+                <label class="input-group-text" >LKR</label>
+            </div>
+            <div class="input-group input-group-lg my-3 input-calculator">
+                <label class="input-group-text label-calculator" for="beforeBill">Before Bill</label>
+                <input type="text" readonly class="form-control text-end" id="beforeBill" value="0.00" min="0">
+                <label class="input-group-text" >LKR</label>
+            </div>
+            <div class="input-group input-group-lg my-3 input-calculator">
+                <label class="input-group-text label-calculator" for="monthlyProfit">Monthly Profit</label>
+                <input type="text" readonly class="form-control text-end" id="monthlyProfit" value="0.00" min="0">
+                <label class="input-group-text" >LKR</label>
+            </div>
+            <div class="input-group input-group-lg my-3 input-calculator">
+                <label class="input-group-text label-calculator">ROI</label>
+                <input type="text" readonly class="form-control text-end" id="roiYears" value="0" min="0">
+                <label class="input-group-text" >Years</label>
+                <input type="text" readonly class="form-control text-end" id="roiMonths" value="0" min="0">
+                <label class="input-group-text" >Months</label>
             </div>
         </form>
     </div>
 
 
     <div class="container clearfix">
+        <div class="hr-calculator"></div>
         <div class="alert alert-info d-flex" role="alert">
-            * Assumed the solar power plant has an average of 800 kWh generation per month.
+            * assumed the solar power plant has an average of 800 kWh generation per month.
         </div>
         <div class="alert alert-info d-flex" role="alert">
-            * All assumptions are based on the already installed power plants outcome
+            * the price for 1 kWh (unit) is 37.00 LKR  up to 500 kWh (unit).
         </div>
+        <div class="alert alert-info d-flex" role="alert">
+            * the price for 1 kWh (unit) is 34.50.00 LKR more than 500 kWh (unit).
+        </div>
+        <div class="alert alert-info d-flex" role="alert">
+            * assumed the solar power plant setup cost is 1,150,000 LKR (1.15M).
+        </div>
+        <div class="alert alert-info d-flex" role="alert">
+            * all assumptions are based on the already installed power plants outcome.
+        </div>
+        <div class="hr-calculator"></div>
     </div>
 </section>
 
-<footer class="footer">
+<footer>
     <p>&copy; 2024 SolarisLumina (Pvt) Limited. All rights reserved.</p>
 </footer>
 
 <!-- Add Bootstrap JS and Popper.js -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="/js/calculator.js"></script>
+<script src="/js/prediction.js"></script>
 <script src="/js/script.js"></script>
 </body>
 </html>
