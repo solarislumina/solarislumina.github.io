@@ -152,7 +152,7 @@ function calculate() {
                 console.log(min + " - " + max + ": " + tariffCost  + " Charge: " + charge);
             }
 
-            max = units;
+            max = beforeUnits;
             min = Number(days * 6);
             cost = Number(89.00);
             tariffCost = Number(getTariffUnits(beforeUnits, min, max) * cost);
