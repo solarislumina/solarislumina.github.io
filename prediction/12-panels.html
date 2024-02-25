@@ -40,7 +40,7 @@
     <meta name="keywords"
           content="solar generator, off grid, on grid, off grid solar system, on grid solar system, solar loan, solar loan sri lanka, solar power price in sri lanka, inverter, battery"/>
 </head>
-<body  onload="onLoadPage()">
+<body onload="onLoadPage()">
 <header>
     <div class="logo">
         <a href="/">
@@ -53,6 +53,16 @@
 <section id="billCalculator">
     <div class="container clearfix">
         <h2 class="my-4">Prediction Calculator (12 Panels Power Plant)</h2>
+        <div class="card border-0 text-end">
+            <small><em>
+            <p class="card-text" style="margin-bottom: 0rem;">* assumed the solar power plant has an average of 800 unit (kWh) generation
+                per month.</p>
+            <p class="card-text" style="margin-bottom: 0rem;">* last update on 25 feb 2024. all calculation factors base on this day.</p>
+            <p class="card-text" style="margin-bottom: 0rem;">* the price for unit (1 kWh) is 37.00 LKR up to 500 unit (kWh). The rest will get 34.50.00 LKR per unit (1kWh)</p>
+            <p class="card-text" style="margin-bottom: 0rem;">* assumed the solar power plant setup cost is 1,150,000 LKR (1.15M).</p>
+            <p class="card-text" style="margin-bottom: 0rem;">* all assumptions are based on the already installed power plants outcome.</p>
+            </em></small>
+        </div>
         <form>
             <div class="input-group input-group-lg my-3 input-calculator">
                 <label class="input-group-text label-calculator" for="tariffCategory">Tariff Category</label>
@@ -67,17 +77,18 @@
             <div class="input-group input-group-lg my-3 input-calculator">
                 <label class="input-group-text label-calculator" for="units">Consumed Units</label>
                 <input type="number" class="form-control" id="units" value="0" min="0" onchange="calculate()">
-                <label class="input-group-text" >kWh</label>
+                <label class="input-group-text">kWh</label>
             </div>
             <div class="input-group input-group-lg my-3 input-calculator">
                 <label class="input-group-text label-calculator" for="exportUnits">
                     Generated Units
                 </label>
                 <input type="number" class="form-control" id="exportUnits" value="800" min="0" onchange="calculate()">
-                <label class="input-group-text" >kWh</label>
+                <label class="input-group-text">kWh</label>
             </div>
             <div class="input-group input-group-lg my-3 input-calculator">
-                <button class="btn btn-outline-secondary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#billDetails" aria-expanded="false" aria-controls="billDetails">
+                <button class="btn btn-outline-secondary w-100" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#billDetails" aria-expanded="false" aria-controls="billDetails">
                     Bill Calculation - More Details
                 </button>
             </div>
@@ -85,7 +96,8 @@
                 <div>
                     <div class="input-group input-group-lg my-3 input-calculator">
                         <label class="input-group-text label-calculator" for="importCharge">Import Charge</label>
-                        <input type="text" readonly class="form-control text-end" id="importCharge" value="0.00" min="1">
+                        <input type="text" readonly class="form-control text-end" id="importCharge" value="0.00"
+                               min="1">
                         <label class="input-group-text" for="units">LKR</label>
                     </div>
                     <div class="input-group input-group-lg my-3 input-calculator">
@@ -104,55 +116,31 @@
             <div class="input-group input-group-lg my-3 input-calculator">
                 <label class="input-group-text label-calculator" for="bill">New Bill</label>
                 <input type="text" readonly class="form-control text-end" id="bill" value="0.00" min="0">
-                <label class="input-group-text" >LKR</label>
+                <label class="input-group-text">LKR</label>
             </div>
             <div class="input-group input-group-lg my-3 input-calculator">
                 <label class="input-group-text label-calculator" for="monthlyIncome">New Income</label>
                 <input type="text" readonly class="form-control text-end" id="monthlyIncome" value="0.00" min="0">
-                <label class="input-group-text" >LKR</label>
+                <label class="input-group-text">LKR</label>
             </div>
             <div class="input-group input-group-lg my-3 input-calculator">
                 <label class="input-group-text label-calculator" for="beforeBill">Previus Bill</label>
                 <input type="text" readonly class="form-control text-end" id="beforeBill" value="0.00" min="0">
-                <label class="input-group-text" >LKR</label>
+                <label class="input-group-text">LKR</label>
             </div>
             <div class="input-group input-group-lg my-3 input-calculator">
                 <label class="input-group-text label-calculator" for="monthlyProfit">Monthly Profit</label>
                 <input type="text" readonly class="form-control text-end" id="monthlyProfit" value="0.00" min="0">
-                <label class="input-group-text" >LKR</label>
+                <label class="input-group-text">LKR</label>
             </div>
             <div class="input-group input-group-lg my-3 input-calculator">
                 <label class="input-group-text label-calculator">Cost Covered In</label>
                 <input type="text" readonly class="form-control text-end" id="roiYears" value="0" min="0">
-                <label class="input-group-text" >Years</label>
+                <label class="input-group-text">Years</label>
                 <input type="text" readonly class="form-control text-end" id="roiMonths" value="0" min="0">
-                <label class="input-group-text" >Months</label>
+                <label class="input-group-text">Months</label>
             </div>
         </form>
-    </div>
-
-
-    <div class="container clearfix">
-        <div class="hr-calculator"></div>
-        <div class="alert alert-info d-flex" role="alert">
-            * assumed the solar power plant has an average of 800 kWh generation per month.
-        </div>
-        <div class="alert alert-info d-flex" role="alert">
-            * the price for 1 kWh (unit) is 37.00 LKR  up to 500 kWh (unit).
-        </div>
-        <div class="alert alert-info d-flex" role="alert">
-            * the price for 1 kWh (unit) is 34.50.00 LKR more than 500 kWh (unit).
-        </div>
-        <div class="alert alert-info d-flex" role="alert">
-            * assumed the solar power plant setup cost is 1,150,000 LKR (1.15M).
-        </div>
-        <div class="alert alert-info d-flex" role="alert">
-            * all assumptions are based on the already installed power plants outcome.
-        </div>
-        <div class="alert alert-info d-flex" role="alert">
-            * last update on 25 feb 2024. all calculation factors base on this day.
-        </div>
-        <div class="hr-calculator"></div>
     </div>
 </section>
 
