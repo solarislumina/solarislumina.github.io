@@ -150,7 +150,8 @@ div.bag-image {
 }
 
 .label-calculator {
-    min-width: 200px
+    width: 200px;
+    overflow: hidden;
 }
 
 .hr-calculator {

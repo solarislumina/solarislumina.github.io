@@ -75,6 +75,7 @@
                 <label class="input-group-text" >kWh</label>
             </div>
             <div class="collapse" id="billDetails">
+                <div class="hr-calculator"></div>
                 <div>
                     <div class="input-group input-group-lg my-3 input-calculator">
                         <label class="input-group-text label-calculator" for="importCharge">Import Charge</label>
@@ -93,12 +94,13 @@
                 </div>
                 </div>
             </div>
+
             <div class="hr-calculator"></div>
             <div class="input-group input-group-lg my-3 input-calculator">
                 <label class="input-group-text label-calculator" for="bill">New Bill</label>
                 <input type="text" readonly class="form-control text-end" id="bill" value="0.00" min="0">
                 <label class="input-group-text" >LKR</label>
-                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#billDetails" aria-expanded="false" aria-controls="billDetails">
+                <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#billDetails" aria-expanded="false" aria-controls="billDetails">
                     More
                 </button>
             </div>
