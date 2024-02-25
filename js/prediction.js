@@ -178,7 +178,7 @@ function calculate() {
     }
         document.getElementById("monthlyIncome").value = income.toLocaleString(undefined, {minimumFractionDigits: 2});
     let beforeTax = Math.round(((beforeCharge  + beforeFixedCharge) * 0.025642) * 100) / 100;
-    let beforeBill = beforeCharge + beforeFixedCharge + tax;
+    let beforeBill = beforeCharge + beforeFixedCharge + beforeTax;
     document.getElementById("beforeBill").value = beforeBill.toLocaleString(undefined, {minimumFractionDigits: 2});
     let profit = beforeBill + income - bill;
     document.getElementById("monthlyProfit").value = profit.toLocaleString(undefined, {minimumFractionDigits: 2});
